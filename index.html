@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <!-- إعدادات الصفحة الأساسية (شخصية الكاتب، التوافق مع الأجهزة، ووصف محركات البحث) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Yasser | Frontend Developer</title>
+    <meta name="author" content="Mohamed Yasser">
+    <meta name="description" content="Full-Stack Developer, Flutter Engineer, and Systems Thinker integrating AI into scalable digital solutions. Based in Egypt.">
+    
+    <!-- إعدادات بطاقات التواصل الاجتماعي (Open Graph) ليظهر الموقع بشكل احترافي عند مشاركته على واتساب، لينكد إن، ديسكورد، وغيرها -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohamed-y-genedi.github.io/portfolio/">
+    <meta property="og:title" content="Mohamed Yasser | Full-Stack & Flutter Engineer">
+    <meta property="og:description" content="Full-Stack Developer, Flutter Engineer, and Systems Thinker integrating AI into scalable digital solutions. Based in Egypt.">
+    <meta property="og:image" content="./assets/images/og-preview.webp">
+
+    <!-- إعدادات بطاقات تويتر (Twitter Cards) لضمان ظهور بطاقة عرض كبيرة وجذابة -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mohamed-y-genedi.github.io/portfolio/">
+    <meta name="twitter:title" content="Mohamed Yasser | Full-Stack & Flutter Engineer">
+    <meta name="twitter:description" content="Full-Stack Developer, Flutter Engineer, and Systems Thinker integrating AI into scalable digital solutions. Based in Egypt.">
+    <meta name="twitter:image" content="./assets/images/og-preview.webp">
+    
+    <!-- Favicon to prevent 404 -->
+    <link rel="icon" href="./assets/images/profile.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Arabic Font (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FW3TWMWTQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-4FW3TWMWTQ');
+        </script>
+</head>
+<body>
+    <!-- MODULE 1: CUSTOM CURSOR -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- MODULE 3: READING PROGRESS BAR -->
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+    <!-- MODULE 2: TOAST CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo"><img src="assets/brand/m5-logo.jpg" alt="M5+ Personal Brand" class="nav__logo-img"></a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" data-i18n="nav_home">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav_about">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav_skills">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link" data-i18n="nav_projects">Projects</a></li>
+                    <li class="nav__item"><a href="#workflow" class="nav__link" data-i18n="nav_journey">Journey</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Language Toggle -->
+                <div class="lang-toggle" id="lang-toggle">
+                    <span class="lang-text">EN</span> | <span class="lang-text">AR</span>
+                </div>
+
+
+                <!-- Theme Change Button -->
+                <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- HERO SECTION -->
+        <section class="home section" id="home">
+            <div class="container">
+                <div class="home__container grid">
+                    <!-- Text Content -->
+                <div class="home__content">
+                    <div class="home__data hidden-element">
+                        <h3 class="hero__greeting" data-i18n="greeting" style="color: var(--first-color); font-weight: 500; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Hello, I'm Mohamed Yasser 👋</h3>
+                        <h1 class="home__title">
+                            <span data-i18n="hero_title">Translating Complex Ideas into</span><br>
+                            <span class="typewriter-text" data-words='["Seamless Software.", "Full-Stack Web Apps.", "Native Mobile Apps.", "AI-Driven Workflows."]'></span><span class="typewriter-cursor"></span>
+                        </h1>
+                        <p class="home__description" data-i18n="hero_desc_main">
+                            I engineer premium digital experiences from the database to the deployment.
+                        </p>
+                        
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/mohamed-yasser-8a0b43278/" target="_blank" class="home__social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/mohamed-y-genedi" target="_blank" class="home__social-icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:mohamed.y.genedi@gmail.com" class="home__social-icon"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+        
+                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <a href="#contact" class="button button--flex">
+                                <span data-i18n="hero_contact">Contact Me</span> <i class="fa-regular fa-paper-plane button__icon"></i>
+                            </a>
+                            <a href="assets/cv.pdf" download class="button button--ghost button--flex" style="padding: 1rem 1.5rem; border-radius: 0.5rem;">
+                                <span data-i18n="downloadCV">Download CV <i class='ri-download-line'></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="home__img-wrapper hidden-element skeleton">
+                    <img src="assets/images/profile.png" alt="Mohamed Yasser" class="home__img" fetchpriority="high" decoding="async" onload="this.parentElement.classList.remove('skeleton')">
+                </div>
+            </div>
+            
+            <div class="home__scroll hidden-element">
+                <a href="#about" class="home__scroll-button button--flex">
+                    <i class="fa-solid fa-arrow-down home__scroll-mouse"></i>
+                    <span class="home__scroll-name" data-i18n="scroll_down">Scroll down</span>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME & PHILOSOPHY -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="about_title">About Me</h2>
+                <span class="section__subtitle" data-i18n="about_subtitle">My Introduction</span>
+
+                <div class="about__container grid">
+                    <div class="about__data hidden-element">
+                    <h3 class="about__philosophy-title" data-i18n="philosophy_title">How I Think as a Developer</h3>
+                    <p class="about__description" data-i18n="philosophy_desc">
+                        I believe in <strong>User-First Mindset</strong>, <strong>Simplicity</strong>, and <strong>Learning by Building</strong>. 
+                        Code is just a tool; the value comes from the experience it creates.
+                    </p>
+                    
+                    <p class="about__description" data-i18n="about_text_1">
+                        My journey started with a deep curiosity for how users interact with digital products.
+                        I focus on building things that not only look good but work seamlessly.
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title" data-i18n="info_loc">Location</span>
+                            <span class="about__info-name" data-i18n="info_loc_value">Mansoura, Egypt</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title" data-i18n="info_focus">Focus</span>
+                            <span class="about__info-name" data-i18n="info_focus_value">Frontend & UX</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title" data-i18n="info_status">Status</span>
+                            <span class="about__info-name" data-i18n="status_open">Open to Work</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about__learning">
+                        <span class="about__learning-title" data-i18n="learning_title">Currently Learning:</span>
+                        <div class="about__learning-tags">
+                            <span class="about__learning-tag" data-i18n="learning_js">JavaScript Deep Dive</span>
+                            <span class="about__learning-tag" data-i18n="learning_responsive">Responsive Patterns</span>
+                            <span class="about__learning-tag" data-i18n="learning_git">Git Workflow</span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a href="#projects" class="button button--flex">
+                            <span data-i18n="check_projects">Check My Projects</span> <i class="fa-solid fa-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKFLOW TIMELINE SECTION -->
+        <section class="workflow section" id="workflow">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="workflow_title">My Process</h2>
+                <span class="section__subtitle" data-i18n="workflow_subtitle">How I Build Solutions</span>
+
+                <div class="workflow__container">
+                    <div class="workflow__line"></div>
+
+                <!-- Step 1 -->
+                <div class="workflow__item hidden-element reveal">
+                    <div class="workflow__node"></div>
+                    <div class="workflow__content">
+                        <span class="workflow__step" data-i18n="step_01_label">Step 01</span>
+                        <h3 class="workflow__title" data-i18n="step_01_title">System Analysis</h3>
+                        <p class="workflow__description" data-i18n="step_01_desc">Understanding business logic, mapping requirements, and identifying bottlenecks.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="workflow__item hidden-element reveal">
+                    <div class="workflow__node"></div>
+                    <div class="workflow__content">
+                        <span class="workflow__step" data-i18n="step_02_label">Step 02</span>
+                        <h3 class="workflow__title" data-i18n="step_02_title">Architecture & Design</h3>
+                        <p class="workflow__description" data-i18n="step_02_desc">Structuring database schemas, planning API routes, and drafting UI/UX wireframes.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="workflow__item hidden-element reveal">
+                    <div class="workflow__node"></div>
+                    <div class="workflow__content">
+                        <span class="workflow__step" data-i18n="step_03_label">Step 03</span>
+                        <h3 class="workflow__title" data-i18n="step_03_title">AI-Assisted Development</h3>
+                        <p class="workflow__description" data-i18n="step_03_desc">Writing clean, modular code at high speed using advanced AI agents and IDE tools.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="workflow__item hidden-element reveal">
+                    <div class="workflow__node"></div>
+                    <div class="workflow__content">
+                        <span class="workflow__step" data-i18n="step_04_label">Step 04</span>
+                        <h3 class="workflow__title" data-i18n="step_04_title">Deployment & Scaling</h3>
+                        <p class="workflow__description" data-i18n="step_04_desc">Optimizing performance, SEO, and pushing the system live with a robust architecture.</p>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION (NEW CATEGORIZED LAYOUT) -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="skills_title">Skills & Expertise</h2>
+                <span class="section__subtitle" data-i18n="skills_subtitle">My Technical Level</span>
+
+                <div class="skills__container grid">
+                    
+                    <!-- Frontend Development Category -->
+                    <div class="skills__category hidden-element reveal">
+                        <h3 class="skills__category-title">
+                            <span data-i18n="skills_frontend">Frontend Development</span> <i class="ri-layout-masonry-fill"></i>
+                        </h3>
+                        
+                        <div class="skills__bento-grid">
+                            <!-- HTML -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">HTML</h4>
+                                    <i class="ri-html5-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">95%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 95%;"></span>
+                                </div>
+                            </div>
+                            <!-- CSS -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">CSS</h4>
+                                    <i class="ri-css3-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">95%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 95%;"></span>
+                                </div>
+                            </div>
+                            <!-- JS -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Vanilla JS</h4>
+                                    <i class="ri-javascript-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">90%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+                            <!-- React / Next.js -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">React / Next.js</h4>
+                                    <i class="ri-reactjs-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">85%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 85%;"></span>
+                                </div>
+                            </div>
+                            <!-- Tailwind CSS -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Tailwind CSS</h4>
+                                    <i class="ri-tailwind-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">90%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Systems Category -->
+                    <div class="skills__category hidden-element reveal">
+                        <h3 class="skills__category-title">
+                            <span data-i18n="skills_backend">Backend & Systems</span> <i class="ri-server-fill"></i>
+                        </h3>
+                        
+                        <div class="skills__bento-grid">
+                            <!-- Node.js -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Node.js</h4>
+                                    <i class="ri-nodejs-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">80%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                            <!-- MongoDB / SQL -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">MongoDB / SQL</h4>
+                                    <i class="ri-database-2-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">75%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 75%;"></span>
+                                </div>
+                            </div>
+                            <!-- API / Postman -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">API / Postman</h4>
+                                    <i class="ri-api-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">85%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 85%;"></span>
+                                </div>
+                            </div>
+                            <!-- Git & GitHub -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Git & GitHub</h4>
+                                    <i class="ri-github-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">90%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My AI Tools Category -->
+                    <div class="skills__category hidden-element reveal">
+                        <h3 class="skills__category-title">
+                            <span data-i18n="skills_ai_tools">My AI Tools</span> <i class="ri-robot-2-fill"></i>
+                        </h3>
+                        
+                        <div class="skills__bento-grid">
+                            <!-- Cursor AI -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Cursor AI</h4>
+                                    <i class="ri-code-box-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">95%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 95%;"></span>
+                                </div>
+                            </div>
+                            <!-- Claude 3.5 Sonnet -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Claude 3.5</h4>
+                                    <i class="ri-brain-line skills__icon"></i>
+                                </div>
+                                <span class="skills__number">90%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+                            <!-- ChatGPT -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">ChatGPT (GPT-4o)</h4>
+                                    <i class="ri-openai-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">95%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 95%;"></span>
+                                </div>
+                            </div>
+                            <!-- Luma / Runway -->
+                            <div class="skills__bento-card">
+                                <div class="skills__bento-header">
+                                    <h4 class="skills__name">Luma / Runway AI</h4>
+                                    <i class="ri-sparkling-fill skills__icon"></i>
+                                </div>
+                                <span class="skills__number">80%</span>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MY SERVICES SECTION -->
+        <section class="services-grid section" id="services">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="myServices">My Services</h2>
+                <span class="section__subtitle" data-i18n="myServices_subtitle">What I Offer</span>
+
+                <div class="services-cards grid">
+                    <!-- Service 1: E-Commerce -->
+                    <div class="service-card hidden-element reveal">
+                        <div class="service-card__icon">
+                            <i class="ri-shopping-cart-line"></i>
+                        </div>
+                        <h3 class="service-card__title" data-i18n="ecommerce_title">E-Commerce Solutions</h3>
+                        <p class="service-card__desc" data-i18n="ecommerce_desc">Building custom, high-converting digital storefronts.</p>
+                    </div>
+
+                    <!-- Service 2: Web Applications -->
+                    <div class="service-card hidden-element reveal">
+                        <div class="service-card__icon">
+                            <i class="ri-layout-4-line"></i>
+                        </div>
+                        <h3 class="service-card__title" data-i18n="webapp_title">Web Applications</h3>
+                        <p class="service-card__desc" data-i18n="webapp_desc">Architecting scalable frontend systems.</p>
+                    </div>
+
+                    <!-- Service 3: AI Workflows -->
+                    <div class="service-card hidden-element reveal">
+                        <div class="service-card__icon">
+                            <i class="ri-robot-2-line"></i>
+                        </div>
+                        <h3 class="service-card__title" data-i18n="aiworkflow_title">AI-Driven Workflows</h3>
+                        <p class="service-card__desc" data-i18n="aiworkflow_desc">Leveraging AI to automate tasks and enhance productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED BY (CLIENTS) SECTION -->
+        <section class="trusted-by section" id="trusted-by">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="trustedBy">Trusted By</h2>
+                <div class="trusted-clients">
+                    <div class="trusted-client hidden-element reveal" data-i18n="attara">Attara Yasser Genedi</div>
+                    <div class="trusted-client hidden-element reveal" data-i18n="altaweel">Al-Taweel Car Imports</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (ENHANCED CASE STUDY) -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="projects_title">Projects</h2>
+                <span class="section__subtitle" data-i18n="projects_subtitle">Recent Work</span>
+
+                <div class="projects__container grid">
+                    <!-- FEATURED PROJECT -->
+                <!-- CASE STUDY COMPONENT -->
+                <div class="case-study-card hidden-element reveal">
+                    <!-- Left: Mockup / Visual -->
+                    <div class="case-study__visual">
+                        <img src="assets/projects/portfolio_mockup.png" alt="Attara E-Commerce Platform" class="case-study__img" loading="lazy" decoding="async">
+                    </div>
+                    
+                    <!-- Right: Content -->
+                    <div class="case-study__content">
+                        <span class="case-study__eyebrow" data-i18n="project_featured">Featured Case Study</span>
+                        <h3 class="case-study__title" data-i18n="project_p1_title">Attara E-Commerce Platform</h3>
+                        
+                        <div class="case-study__details">
+                            <div class="case-study__block">
+                                <strong data-i18n="case_problem">The Challenge:</strong>
+                                <p data-i18n="case_problem_desc">Complex navigation and cluttered layouts confuse users in online stores.</p>
+                            </div>
+                            <div class="case-study__block">
+                                <strong data-i18n="case_solution">The Solution:</strong>
+                                <p data-i18n="case_solution_desc">A clear, grid-based layout with simplified filtering and intuitive product cards.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Tech Stack Pills -->
+                        <div class="case-study__stack">
+                            <span class="tech-badge" data-i18n="tech_nextjs">Next.js</span>
+                            <span class="tech-badge" data-i18n="tech_vanilla">Vanilla JS</span>
+                            <span class="tech-badge" data-i18n="tech_ai">AI Integrated</span>
+                        </div>
+
+                        <div class="case-study__actions">
+                            <a href="https://mohamed-yasser-dev.netlify.app/" target="_blank" class="button case-study__btn">
+                                <span data-i18n="view_live">View Live Project</span> <i class="fa-solid fa-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://github.com/mohamed-y-genedi/personal-portfolio" target="_blank" class="button--link case-study__link">
+                                <span data-i18n="read_arch">Read Full Architecture</span> <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="projects__content hidden-element reveal">
+                    
+                    <div class="projects__data">
+                        <span class="projects__category" data-i18n="project_category_case">Case Study</span>
+                        <h3 class="projects__title" data-i18n="project_p2_title">Digital Transformation: Traditional Retail to E-Commerce</h3>
+                        <p class="projects__description" data-i18n="project_p2_desc">End-to-end digitization of a local spice business ('Attara'). Built a custom inventory system and customer-facing storefront, bridging the gap between offline retail and digital sales.</p>
+                        <span class="projects__status" data-i18n="project_status">Frontend - In Progress (~80%)</span>
+                        
+                        <div class="projects__case-study">
+                            <div class="case__item">
+                                <strong data-i18n="case_problem">The Problem:</strong>
+                                <p data-i18n="case_problem_desc">Complex navigation and cluttered layouts confuse users in online stores.</p>
+                            </div>
+                            <div class="case__item">
+                                <strong data-i18n="case_solution">The Solution:</strong>
+                                <p data-i18n="case_solution_desc">A clear, grid-based layout with simplified filtering and intuitive product cards.</p>
+                            </div>
+                            <div class="case__item">
+                                <strong data-i18n="case_learnings">Key Learnings:</strong>
+                                <p data-i18n="case_learnings_desc">Thinking from the user's perspective, structuring pages for usability, and writing modular code.</p>
+                            </div>
+                        </div>
+
+                        <div class="projects__tags">
+                            <span class="tech-badge" data-i18n="tech_html">HTML</span>
+                            <span class="tech-badge" data-i18n="tech_css">CSS</span>
+                            <span class="tech-badge" data-i18n="tech_javascript">JavaScript</span>
+                        </div>
+
+                        <a href="https://github.com/mohamed-y-genedi/personal-portfolio" target="_blank" class="button button--small button--link">
+                            <span data-i18n="view_demo">View Demo</span> <i class="fa-solid fa-arrow-right button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CAREER OBJECTIVE SECTION -->
+         <section class="section" id="objective">
+            <div class="container hidden-element" style="text-align: center;">
+                 <h2 class="section__title reveal" data-i18n="career_title">Career Objective</h2>
+                 <p class="about__description" style="max-width: 700px; margin: 0 auto; margin-bottom: 2rem;" data-i18n="career_desc">
+                    I am dedicated to continuous learning and professional growth. My aim is to establish a career in freelancing and collaborate with startups to build meaningful, user-focused digital experiences. Looking ahead, I plan to expand my expertise into Data & AI to create smarter, data-driven applications.
+                 </p>
+            </div>
+         </section>
+
+        <!-- MY DIGITAL BRAND SECTION -->
+        <section class="brand section" id="brand">
+            <div class="container" style="position: relative;">
+                <div class="brand__glow"></div>
+                <h2 class="section__title reveal" data-i18n="myBrand">My Digital Brand</h2>
+                <div class="brand__container hidden-element reveal">
+                    <h3 class="brand__subtitle" data-i18n="m5Subtitle">M5+ | Tech Content & Systems Engineering</h3>
+                    <p class="brand__description" data-i18n="m5Description">
+                        Beyond writing code, I am building a technical YouTube channel focused on high-quality visual content, deep systems thinking, and AI exploration. I believe in mastering tools to create premium digital experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title reveal" data-i18n="contact_title">Contact Me</h2>
+                <span class="section__subtitle" data-i18n="contact_subtitle">Get in touch</span>
+
+                <div class="contact__container grid">
+                <div class="contact__content hidden-element">
+                    <h3 class="contact__title" data-i18n="talk_to_me">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="fa-regular fa-envelope contact__card-icon"></i>
+                            <h3 class="contact__card-title" data-i18n="contact_email">Email</h3>
+                            <span class="contact__card-data">mohamed.y.genedi@gmail.com</span>
+                            <a href="mailto:mohamed.y.genedi@gmail.com" class="contact__button"><span data-i18n="write_me">Write me</span> <i class="fa-solid fa-arrow-right contact__button-icon"></i></a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="fa-brands fa-linkedin-in contact__card-icon"></i>
+                            <h3 class="contact__card-title" data-i18n="contact_linkedin">LinkedIn</h3>
+                            <span class="contact__card-data" data-i18n="hero_name">Mohamed Yasser</span>
+                            <a href="https://www.linkedin.com/in/mohamed-yasser-8a0b43278/" target="_blank" class="contact__button"><span data-i18n="connect">Connect</span> <i class="fa-solid fa-arrow-right contact__button-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content hidden-element">
+                    <h3 class="contact__title" data-i18n="write_project">Write me your project</h3>
+
+                    <form action="" class="contact__form" id="contact-form">
+                        <!-- Honeypot Field (Hidden) -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag" data-i18n="form_name">Name</label>
+                            <input type="text" name="name" class="contact__form-input" id="contact-name" data-i18n="form_name_placeholder" placeholder="Insert your name">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag" data-i18n="form_mail">Mail</label>
+                            <input type="email" name="email" class="contact__form-input" id="contact-email" data-i18n="form_mail_placeholder" placeholder="Insert your email">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label class="contact__form-tag" data-i18n="form_message">Message</label>
+                            <textarea name="message" cols="30" rows="10" class="contact__form-input" id="contact-message" data-i18n="form_message_placeholder" placeholder="Write your project"></textarea>
+                        </div>
+
+
+
+                        <button class="button" data-i18n="send_message">Send Message</button>
+                    </form>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDY MODAL -->
+        <div class="modal" id="modal-portfolio" aria-hidden="true" role="dialog">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <button class="modal__close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+                <h2 class="modal__title" data-i18n="project_p1_title">Personal Portfolio Website</h2>
+                <span class="modal__subtitle" data-i18n="project_type">Full Stack Web Application</span>
+                
+                <div class="modal__body">
+                    <div class="modal__section">
+                        <h3 data-i18n="case_overview">Overview</h3>
+                        <p data-i18n="case_p1_overview">Why this project was built and what problem it solves.</p>
+                    </div>
+                    
+                    <div class="modal__section">
+                        <h3 data-i18n="case_challenges">Challenges</h3>
+                        <ul class="modal__list">
+                            <li data-i18n="case_p1_chal_1">Building a clean RTL/LTR layout</li>
+                            <li data-i18n="case_p1_chal_2">Managing dark/light themes</li>
+                            <li data-i18n="case_p1_chal_3">Integrating backend with frontend securely</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal__section">
+                        <h3 data-i18n="case_solutions">Solutions</h3>
+                        <ul class="modal__list">
+                            <li data-i18n="case_p1_sol_1">Component-based CSS structure</li>
+                            <li data-i18n="case_p1_sol_2">Backend API with validation & Firestore</li>
+                            <li data-i18n="case_p1_sol_3">Spam protection using honeypot</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal__section">
+                        <h3 data-i18n="case_outcome">Outcome</h3>
+                        <ul class="modal__list">
+                            <li data-i18n="case_p1_out_1">Fully functional production-ready portfolio</li>
+                            <li data-i18n="case_p1_out_2">Improved UX, performance, and accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">M5+.</h1>
+            <ul class="footer__list">
+                <li><a href="#about" class="footer__link" data-i18n="nav_about">About</a></li>
+                <li><a href="#projects" class="footer__link" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#services" class="footer__link" data-i18n="nav_services">Services</a></li>
+            </ul>
+
+            <div class="footer__social">
+                <a href="https://github.com/mohamed-y-genedi" target="_blank" class="footer__social-link"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-yasser-8a0b43278/" target="_blank" class="footer__social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@Medoyasser1" target="_blank" class="footer__social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/mohamed.yasser.849353/" target="_blank" class="footer__social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+
+            <span class="footer__copy" data-i18n="footer_copy">&#169; Mohamed Yasser. All rights reserved.</span>
+            
+            <div class="server-status">
+                <span class="status-indicator"></span>
+                <span class="status-text" data-i18n="footer_status">All Systems Operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODULE 3: MOBILE DOCK -->
+    <div class="mobile-dock">
+        <a href="#home" class="dock-item">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#projects" class="dock-item">
+            <i class="fa-solid fa-briefcase"></i>
+        </a>
+        <a href="#contact" class="dock-item">
+            <i class="fa-solid fa-paper-plane"></i>
+        </a>
+        <a href="https://wa.me/201556734269" target="_blank" class="dock-item whatsapp">
+             <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- MODULE 3: SMART SCROLL UP (SVG) -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <svg class="progress-ring" width="44" height="44">
+           <circle class="progress-ring__circle" stroke="#fff" stroke-width="4" fill="transparent" r="18" cx="22" cy="22"/>
+        </svg>
+        <i class="fa-solid fa-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- DOMPurify for XSS sanitization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.9/purify.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script type="module" src="js/modules/main.js"></script>
+</body>
+</html>

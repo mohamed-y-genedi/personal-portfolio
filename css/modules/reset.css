@@ -1,0 +1,89 @@
+/*
+  إعادة ضبط أساسية (Reset) + قواعد أساسية للصفحة
+  يعتمد على متغيرات الألوان والطباعة الموجودة في variables.css
+  هذا الملف يضمن انسيابية التمرير وإخفاء التمرير الأفقي على الأجهزة الصغيرة.
+*/
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling and scroll padding for fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(
+    --header-height,
+    5rem
+  ); /* Prevents fixed header from overlapping section titles */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Body defaults (uses variables from variables.css) */
+body {
+  overflow-x: hidden; /* Critical Fix: Mobile Overflow */
+  width: 100%;
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.8; /* Increased for better readability */
+  transition:
+    background-color 0.4s,
+    color 0.4s;
+  padding-top: var(--header-height); /* Push content down for fixed header */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Typography base */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.2;
+}
+
+/* Utility resets */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Small-screen safety */
+@media screen and (max-width: 350px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--body-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--body-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--first-color-alt);
+}

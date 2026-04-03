@@ -1,0 +1,131 @@
+/*
+  متغيرات المشروع: الألوان، الطباعة، أحجام الخطوط، ومؤشرات RTL/LTR
+  يحتفظ هذا الملف بجميع خصائص CSS المخصصة (custom properties)
+  لضمان سهولة التخصيص والدعم للوضع الليلي/النهاري والاتجاهات.
+*/
+
+:root {
+  --header-height: 4.5rem; /* Increased for better touch targets */
+
+  /* Colors */
+  --hue: 265; /* Purple */
+  --first-color: hsl(var(--hue), 69%, 61%);
+  --first-color-second: hsl(var(--hue), 69%, 61%);
+  --first-color-alt: hsl(var(--hue), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue), 92%, 85%);
+  --title-color: hsl(var(--hue), 8%, 95%);
+  --text-color: hsl(var(--hue), 8%, 75%);
+  --text-color-light: hsl(var(--hue), 8%, 65%);
+  --input-color: hsl(var(--hue), 29%, 16%);
+  /* Deep Rich Night Background */
+  --body-color: #0a0a0f;
+  --container-color: #121218;
+  --glass-color: rgba(255, 255, 255, 0.03); /* Glass base */
+  --glass-mobile: rgba(18, 18, 18, 0.95); /* Mobile fallback */
+
+  /* Scrollbar */
+  --scroll-bar-color: hsl(var(--hue), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue), 12%, 36%);
+
+  /* Dynamic Profile Background */
+  --profile-bg: hsl(var(--hue), 29%, 16%); /* Dark gray/black for dark mode */
+  --input-text: hsl(var(--hue), 8%, 95%); /* Light text for dark mode inputs */
+
+  /* Font and Typography */
+  --body-font: "Inter", sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --arabic-font: "Cairo", sans-serif;
+
+  --big-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Spacing */
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* Z Index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* Transitions */
+  --transition-smooth: 0.3s ease-in-out;
+}
+
+/* متغيرات الوضع الفاتح (Light Theme) */
+body.light-theme {
+  --first-color: hsl(var(--hue), 69%, 61%);
+  --title-color: #121212;
+  --text-color: #444;
+  --text-color-light: hsl(var(--hue), 8%, 65%);
+  --input-color: hsl(var(--hue), 70%, 96%);
+  --body-color: hsl(var(--hue), 60%, 99%);
+  --container-color: #fff;
+  --glass-color: rgba(0, 0, 0, 0.03);
+  --glass-mobile: rgba(245, 245, 245, 0.98); /* Light Mobile fallback */
+  --scroll-bar-color: hsl(var(--hue), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue), 12%, 80%);
+
+  /* Dynamic Profile Background */
+  --profile-bg: hsl(var(--hue), 60%, 95%); /* Light gray/white for light mode */
+  --input-text: hsl(var(--hue), 8%, 15%); /* Dark text for light mode inputs */
+}
+
+/* دعم الاتجاه RTL */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: var(--arabic-font);
+}
+
+body.rtl .contact__form-input {
+  text-align: right;
+}
+
+body.rtl .contact__form-tag {
+  left: auto;
+  right: 1.25rem;
+}
+
+/* Flip icons for RTL context */
+body.rtl .button__icon,
+body.rtl .contact__button-icon {
+  margin-left: 0;
+  margin-right: var(--mb-0-5);
+  transform: scaleX(-1);
+}
+
+body.rtl .button:hover .button__icon,
+body.rtl .contact__button:hover .contact__button-icon {
+  transform: translateX(-0.25rem) scaleX(-1);
+}
+
+body.rtl .nav__logo {
+  margin-left: 1.5rem; /* Space between logo and other right-aligned items */
+  margin-right: 0;
+}
+
+/* Standardize RTL Margins for Icons */
+body.rtl .skills__data {
+  text-align: right;
+}
+
+body.rtl .skills__icon {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}

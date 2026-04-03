@@ -1,0 +1,13 @@
+/* Main entry for CSS - نقطة الدخول الرئيسية لملفات التصميم
+  تم تقسيم النظام إلى وحدات (Modules) لسهولة الصيانة 
+*/
+
+@import url("modules/variables.css"); /* متغيرات الألوان والخطوط */
+@import url("modules/reset.css"); /* إعادة ضبط المتصفح الأساسية */
+@import url("modules/layout.css"); /* الهيكل العام والحاويات */
+@import url("modules/navigation.css");
+@import url("modules/hero.css");
+@import url("modules/buttons.css");
+@import url("modules/cards.css");
+@import url("modules/forms.css");
+@import url("modules/components.css"); /* واجهة المستخدم والبطاقات */
