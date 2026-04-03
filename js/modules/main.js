@@ -1,6 +1,32 @@
 import { setLanguage, translations } from './i18n.js';
 import { initTypeWriter, showToast } from './animations.js';
 
+/*==================== SERVICE WORKER REGISTRATION ====================*/
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+                console.log('[SW] Registered, scope:', registration.scope);
+
+                // Detect when a new SW version has been installed and is waiting
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                            // A new version is ready — notify the user
+                            showToast('A new version of this site is available. Refresh to update!', 'info');
+                        }
+                    });
+                });
+            })
+            .catch((error) => {
+                console.error('[SW] Registration failed:', error);
+            });
+    });
+}
+
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
